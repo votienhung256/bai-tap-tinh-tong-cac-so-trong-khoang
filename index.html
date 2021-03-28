@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Nhập vào 2 số đầu và cuối khảng:</h2>
+    <input id="num1" type="number" oninput="ketQua()">
+    <input id="num2" type="number" oninput="ketQua()">
+    <h2>Tổng các số trong khoảng:</h2>
+    <code id="print"></code>
+    <script>
+        function ketQua() {
+            let a = Number(document.getElementById("num1").value)
+            let b = Number(document.getElementById("num2").value)
+            let sum = 0
+            for (let i = a; i <= b; i++) {
+                sum += i
+            }
+            document.getElementById("print").innerHTML = sum
+        }
+    </script>
+</body>
+
+</html>
